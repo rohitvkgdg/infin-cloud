@@ -10,7 +10,12 @@ if (process.env.NODE_ENV === 'development') {
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  experimental: {
+  },
+  // Required for Cloudflare Pages
+  output: 'export',
+  distDir: 'out',
 };
 
 export default nextConfig;
